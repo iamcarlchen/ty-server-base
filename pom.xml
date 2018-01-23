@@ -6,7 +6,7 @@
 
     <groupId>greatbee</groupId>
     <artifactId>ty-server-base</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <name>ty-server-base</name>
     <packaging>jar</packaging>
@@ -100,11 +100,6 @@
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
             <version>3.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>2.1.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

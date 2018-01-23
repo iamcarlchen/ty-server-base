@@ -1,9 +1,11 @@
 package com.greatbee.core.bean.view;
 
 import com.greatbee.base.util.BooleanUtil;
+import com.greatbee.base.util.DataUtil;
 import com.greatbee.base.util.StringUtil;
 import com.greatbee.core.bean.constant.CG;
 import com.greatbee.core.bean.constant.CT;
+import com.greatbee.core.bean.constant.DT;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Junction;
@@ -27,6 +29,8 @@ public class Condition {
     private String conditionFieldValue;
     //条件类型  默认是等于
     private String ct = CT.EQ.getName();
+    //数据类型
+    private String dt= DT.String.getType();
 
     public String getConditionFieldName() {
         return conditionFieldName;
@@ -96,7 +100,7 @@ public class Condition {
             if (StringUtil.isValid(tableAlias)) {
                 sql.append(" ").append(tableAlias).append(".");
             }
-            if (CT.IN.getName().equalsIgnoreCase(condition.getCt())||CT.NOTIN.getName().equalsIgnoreCase(condition.getCt())) {
+            if (CT.IN.getName().equalsIgnoreCase(condition.getCt()) || CT.NOTIN.getName().equalsIgnoreCase(condition.getCt())) {
                 sql.append("`").append(condition.getConditionFieldName()).append("` ").append(CT.getSqlType(condition.getCt())).append(" (");
                 //这里不过滤condition.getConditionFieldValue() 的值，在设置？的时候过滤
                 if (StringUtil.isInvalid(condition.getConditionFieldValue())) {
@@ -146,7 +150,7 @@ public class Condition {
                     ps.setString(_index++, condition.getConditionFieldValue() + "%");
                 } else if (CT.LIKE.getName().equals(condition.getCt())) {
                     ps.setString(_index++, "%" + condition.getConditionFieldValue() + "%");
-                } else if (CT.IN.getName().equalsIgnoreCase(condition.getCt())||CT.NOTIN.getName().equalsIgnoreCase(condition.getCt())) {
+                } else if (CT.IN.getName().equalsIgnoreCase(condition.getCt()) || CT.NOTIN.getName().equalsIgnoreCase(condition.getCt())) {
                     if (StringUtil.isInvalid(condition.getConditionFieldValue())) {
                         ps.setString(_index++, "9999999999");//设置一个不存在的值
                     } else {
@@ -156,10 +160,16 @@ public class Condition {
                         }
                     }
                 } else {
-                    if("''".equals(condition.getConditionFieldValue())){
+                    if ("''".equals(condition.getConditionFieldValue())) {
                         ps.setString(_index++, "");
-                    }else {
-                        ps.setString(_index++, condition.getConditionFieldValue());
+                    } else {
+                        if(DT.INT.getType().equalsIgnoreCase(condition.getDt())){
+                            ps.setInt(_index++, DataUtil.getInt(condition.getConditionFieldValue(), 0));
+                        } else if(DT.Double.getType().equalsIgnoreCase(condition.getDt())){
+                            ps.setDouble(_index++, DataUtil.getDouble(condition.getConditionFieldValue(), 0));
+                        } else {
+                            ps.setString(_index++, condition.getConditionFieldValue());
+                        }
                     }
                 }
             }
@@ -174,7 +184,7 @@ public class Condition {
      * @param junction
      * @param condition
      */
-    public static void buildCriteriaCondition(Class beanClass,Criteria c, Junction junction, Condition condition) {
+    public static void buildCriteriaCondition(Class beanClass, Criteria c, Junction junction, Condition condition) {
         if (condition != null) {
 
             List<Condition> conditions = condition.getConditions();
@@ -188,7 +198,7 @@ public class Condition {
                 //muliCondition
                 for (int i = 0; i < conditions.size(); i++) {
                     Condition _condition = conditions.get(i);
-                    buildCriteriaCondition(beanClass,c, junc, _condition);
+                    buildCriteriaCondition(beanClass, c, junc, _condition);
                 }
                 if (junction == null) {
                     c.add(junc);
@@ -200,19 +210,19 @@ public class Condition {
                 if (junction == null) {
                     c.add(_transferJunction(beanClass, condition));
                 } else {
-                    junction.add(_transferJunction(beanClass,condition));
+                    junction.add(_transferJunction(beanClass, condition));
                 }
             }
         }
     }
 
-    private static Criterion _transferJunction(Class beanClass,Condition condition) {
+    private static Criterion _transferJunction(Class beanClass, Condition condition) {
         if (CT.EQ.getName().equals(condition.getCt())) {
-            return Restrictions.eq(condition.getConditionFieldName(), _getConditionValue(beanClass,condition));
+            return Restrictions.eq(condition.getConditionFieldName(), _getConditionValue(beanClass, condition));
         } else if (CT.GT.getName().equals(condition.getCt())) {
             return Restrictions.gt(condition.getConditionFieldName(), _getConditionValue(beanClass, condition));
         } else if (CT.GE.getName().equals(condition.getCt())) {
-            return Restrictions.ge(condition.getConditionFieldName(),_getConditionValue(beanClass, condition));
+            return Restrictions.ge(condition.getConditionFieldName(), _getConditionValue(beanClass, condition));
         } else if (CT.LT.getName().equals(condition.getCt())) {
             return Restrictions.lt(condition.getConditionFieldName(), _getConditionValue(beanClass, condition));
         } else if (CT.LE.getName().equals(condition.getCt())) {
@@ -239,14 +249,14 @@ public class Condition {
         //TODO is   和 isnot   没有转换
     }
 
-    private static Object _getConditionValue(Class beanClass,Condition condition){
+    private static Object _getConditionValue(Class beanClass, Condition condition) {
         Field[] fs = beanClass.getDeclaredFields();
-        for(int i=0;i<fs.length;i++){
-            Field f= fs[i];
+        for (int i = 0; i < fs.length; i++) {
+            Field f = fs[i];
             String name = f.getName();
             Class type = f.getType();
-            if(StringUtil.isValid(condition.getConditionFieldName())&&name.equals(condition.getConditionFieldName())){
-                if(Boolean.class.equals(type)||boolean.class.equals(type)){
+            if (StringUtil.isValid(condition.getConditionFieldName()) && name.equals(condition.getConditionFieldName())) {
+                if (Boolean.class.equals(type) || boolean.class.equals(type)) {
                     return BooleanUtil.toBool(condition.getConditionFieldValue());
                 }
                 break;
@@ -255,5 +265,11 @@ public class Condition {
         return condition.getConditionFieldValue();
     }
 
+    public String getDt() {
+        return dt;
+    }
 
+    public void setDt(String dt) {
+        this.dt = dt;
+    }
 }
