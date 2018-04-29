@@ -1319,23 +1319,20 @@ public class DataUtil
     // plus minus everything. Prolly more. A lot are not separable.
 
     /**
-     * <p/>
+     *
      * Turns a string value into a java.lang.Number.
      * First, the value is examined for a type qualifier on the end
      * (<code>'f','F','d','D','l','L'</code>).  If it is found, it starts
      * trying to create succissively larger types from the type specified
      * until one is found that can hold the value.
-     * </p>
-     * <p/>
+     *
      * If a type specifier is not found, it will check for a decimal point
      * and then try successively larger types from Integer to BigInteger
      * and from Float to BigDecimal.
-     * </p>
-     * <p/>
+     *
      * If the string starts with "0x" or "-0x", it will be interpreted as a
      * hexadecimal integer.  Values with leading 0's will not be interpreted
      * as octal.
-     * </p>
      *
      * @param val String containing a number
      *            Number created from the string

@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 创建日期
- * <p/>
+ *
  * Created by CarlChen on 2016/11/13.
  */
 public interface CreateDateBean {
@@ -13,7 +13,7 @@ public interface CreateDateBean {
     /**
      * 创建日期
      *
-     * @return
+     * @return 创建日期
      */
     public Date getCreateDate();
 }

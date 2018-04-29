@@ -10,7 +10,6 @@ import java.text.FieldPosition;
  * @author system
  * @version 1.0
  * @see java.text.NumberFormat
- *      <p/>
  *      Title:        NumberFormat
  */
 

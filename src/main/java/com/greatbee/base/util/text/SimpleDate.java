@@ -226,7 +226,6 @@ public class SimpleDate
     }
 
     /**
-     * this<date
      *
      * @param date
      * @return
@@ -237,8 +236,6 @@ public class SimpleDate
     }
 
     /**
-     * this>date
-     *
      * @param date
      * @return
      */

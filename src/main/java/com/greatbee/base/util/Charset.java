@@ -4,8 +4,6 @@ import java.nio.charset.IllegalCharsetNameException;
 import java.util.Locale;
 
 /**
- * �ַ��������
- *
  * @author system
  * @version 1.00 2005-2-5 21:08:00
  */
@@ -44,7 +42,7 @@ public class Charset
 
 
     /**
-     * Tells whether the named charset is supported. </p>
+     * Tells whether the named charset is supported.
      *
      * @param charsetName The name of the requested charset; may be either
      *                    a canonical name or an alias

@@ -6,7 +6,7 @@
 
     <groupId>greatbee</groupId>
     <artifactId>ty-server-base</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <name>ty-server-base</name>
     <packaging>jar</packaging>
@@ -45,6 +45,34 @@
         <spring.version>4.2.0.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/Great-Bee/TY</url>
+        <connection>git@github.com:Great-Bee/TY.git</connection>
+        <developerConnection>http://www.greatbee.com</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>CarlChen</name>
+            <email>carl@greatbee.com.com</email>
+            <url>http://www.greatbee.com</url>
+        </developer>
+    </developers>
 
     <!-- <parent>
         <groupId>org.springframework.boot</groupId>

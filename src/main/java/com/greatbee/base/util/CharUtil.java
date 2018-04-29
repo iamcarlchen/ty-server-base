@@ -134,7 +134,7 @@ public class CharUtil
      * Convert the bytes within the specified range of the given byte
      * array into a signed integer in the given radix . The range extends
      * from <code>start</code> till, but not including <code>end</code>. <p>
-     * <p/>
+     *
      * Based on java.lang.Integer.parseInt()
      */
     public static final int parseInt(byte[] b, int start, int end, int radix)
@@ -228,7 +228,7 @@ public class CharUtil
      * Convert the bytes within the specified range of the given byte
      * array into a signed integer in the given radix . The range extends
      * from <code>start</code> till, but not including <code>end</code>. <p>
-     * <p/>
+     *
      * Based on java.lang.Integer.parseInt()
      */
     public static final int parseInt(char[] b, int start, int end, int radix)
@@ -322,7 +322,7 @@ public class CharUtil
      * Convert the bytes within the specified range of the given byte
      * array into a signed long in the given radix . The range extends
      * from <code>start</code> till, but not including <code>end</code>. <p>
-     * <p/>
+     *
      * Based on java.lang.Long.parseLong()
      */
     public static final long parseLong(byte[] b, int start, int end, int radix)
@@ -416,7 +416,7 @@ public class CharUtil
      * Convert the bytes within the specified range of the given byte
      * array into a signed long in the given radix . The range extends
      * from <code>start</code> till, but not including <code>end</code>. <p>
-     * <p/>
+     *
      * Based on java.lang.Long.parseLong()
      */
     public static final long parseLong(char[] c, int start, int end, int radix)

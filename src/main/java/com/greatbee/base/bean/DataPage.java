@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 翻页数据
- * <p/>
+ *
  * Created by CarlChen on 2016/11/12.
  */
 public class DataPage implements Serializable {
@@ -18,7 +18,7 @@ public class DataPage implements Serializable {
     /**
      * 得到当前请求的页
      *
-     * @return
+     * @return  数量
      */
     public int getCurrentPage(){
         return currentPage;
@@ -27,7 +27,7 @@ public class DataPage implements Serializable {
     /**
      * 得到当前请求页的数据对象
      *
-     * @return
+     * @return  数量
      */
     public List getCurrentRecords(){
         return currentRecords;
@@ -36,7 +36,7 @@ public class DataPage implements Serializable {
     /**
      * 当前请求页的数据量
      *
-     * @return
+     * @return  数量
      */
     public int getCurrentRecordsNum(){
         return currentRecordsNum;
@@ -45,7 +45,7 @@ public class DataPage implements Serializable {
     /**
      * 得到一共多少页
      *
-     * @return
+     * @return  数量
      */
     public int getTotalPages(){
         return totalPages;
@@ -54,7 +54,7 @@ public class DataPage implements Serializable {
     /**
      * 得到一共有多少条数据
      *
-     * @return
+     * @return  数量
      */
     public int getTotalRecords(){
         return  totalRecords;
@@ -62,8 +62,7 @@ public class DataPage implements Serializable {
 
     /**
      * 每页有多少条
-     *
-     * @return
+     * @return  每页条数
      */
     public int getPageSize(){
         return pageSize;

@@ -20,7 +20,6 @@ import java.util.List;
 
 /**
  * Abstract Basic Manager
- * <p/>
  * Created by CarlChen on 2016/12/20.
  */
 public abstract class AbstractBasicManager<T extends Identified> extends HibernateDaoSupport implements BasicManager {

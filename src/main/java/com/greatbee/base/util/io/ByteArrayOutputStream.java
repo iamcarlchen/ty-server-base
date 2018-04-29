@@ -241,7 +241,6 @@ public class ByteArrayOutputStream extends OutputStream
      * Closes this output stream and releases any system resources
      * associated with this stream. A closed stream cannot perform
      * output operations and cannot be reopened.
-     * <p/>
      */
     public void close()
     {

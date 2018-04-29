@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 被标识的对象
- * <p/>
+ *
  * Created by CarlChen on 16/10/11.
  */
 public interface Identified extends Serializable {

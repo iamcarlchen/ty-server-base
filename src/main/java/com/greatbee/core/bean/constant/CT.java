@@ -2,7 +2,6 @@ package com.greatbee.core.bean.constant;
 
 /**
  * Condition Type
- * <p/>
  * Created by CarlChen on 2016/11/12.
  */
 public enum CT {

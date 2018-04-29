@@ -18,7 +18,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -39,7 +39,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -60,7 +60,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -83,7 +83,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -106,7 +106,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -129,7 +129,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -730,18 +730,18 @@ public class CollectionUtil
      * in the list must be <i>mutually comparable</i> (that is,
      * <tt>e1.compareTo(e2)</tt> must not throw a <tt>ClassCastException</tt>
      * for any elements <tt>e1</tt> and <tt>e2</tt> in the list).<p>
-     * <p/>
+     *
      * This sort is guaranteed to be <i>stable</i>:  equal elements will
      * not be reordered as a result of the sort.<p>
-     * <p/>
+     *
      * The specified list must be modifiable, but need not be resizable.<p>
-     * <p/>
+     *
      * The sorting algorithm is a modified mergesort (in which the merge is
      * omitted if the highest element in the low sublist is less than the
      * lowest element in the high sublist).  This algorithm offers guaranteed
      * n log(n) performance, and can approach linear performance on nearly
      * sorted lists.<p>
-     * <p/>
+     *
      * This implementation dumps the specified list into an array, sorts
      * the array, and iterates over the list resetting each element
      * from the corresponding position in the array.  This avoids the
@@ -766,16 +766,16 @@ public class CollectionUtil
      * comparable</i> using the specified comparator (that is,
      * <tt>c.compare(e1, e2)</tt> must not throw a <tt>ClassCastException</tt>
      * for any elements <tt>e1</tt> and <tt>e2</tt> in the list).<p>
-     * <p/>
+     *
      * This sort is guaranteed to be <i>stable</i>:  equal elements will
      * not be reordered as a result of the sort.<p>
-     * <p/>
+     *
      * The sorting algorithm is a modified mergesort (in which the merge is
      * omitted if the highest element in the low sublist is less than the
      * lowest element in the high sublist).  This algorithm offers guaranteed
      * n log(n) performance, and can approach linear performance on nearly
      * sorted lists.<p>
-     * <p/>
+     *
      * The specified list must be modifiable, but need not be resizable.
      * This implementation dumps the specified list into an array, sorts
      * the array, and iterates over the list resetting each element
@@ -807,12 +807,12 @@ public class CollectionUtil
      * not sorted, the results are undefined.  If the list contains multiple
      * elements equal to the specified object, there is no guarantee which one
      * will be found.<p>
-     * <p/>
+     *
      * This method runs in log(n) time for a "random access" list (which
      * provides near-constant-time positional access).  It may
      * run in n log(n) time if it is called on a "sequential access" list
      * (which provides linear-time positional access).</p>
-     * <p/>
+     *
      * If the specified list implements the <tt>AbstracSequentialList</tt>
      * interface, this method will do a sequential search instead of a binary
      * search; this offers linear performance instead of n log(n) performance
@@ -848,12 +848,12 @@ public class CollectionUtil
      * not sorted, the results are undefined.  If the list contains multiple
      * elements equal to the specified object, there is no guarantee which one
      * will be found.<p>
-     * <p/>
+     *
      * This method runs in log(n) time for a "random access" list (which
      * provides near-constant-time positional access).  It may
      * run in n log(n) time if it is called on a "sequential access" list
      * (which provides linear-time positional access).</p>
-     * <p/>
+     *
      * If the specified list implements the <tt>AbstracSequentialList</tt>
      * interface, this method will do a sequential search instead of a binary
      * search; this offers linear performance instead of n log(n) performance
@@ -886,7 +886,7 @@ public class CollectionUtil
 
     /**
      * Reverses the order of the elements in the specified list.<p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param l the list whose elements are to be reversed.
@@ -902,19 +902,19 @@ public class CollectionUtil
      * Randomly permutes the specified list using a default source of
      * randomness.  All permutations occur with approximately equal
      * likelihood.<p>
-     * <p/>
+     *
      * The hedge "approximately" is used in the foregoing description because
      * default source of randomenss is only approximately an unbiased source
      * of independently chosen bits. If it were a perfect source of randomly
      * chosen bits, then the algorithm would choose permutations with perfect
      * uniformity.<p>
-     * <p/>
+     *
      * This implementation traverses the list backwards, from the last element
      * up to the second, repeatedly swapping a randomly selected element into
      * the "current position".  Elements are randomly selected from the
      * portion of the list that runs from the first element to the current
      * position, inclusive.<p>
-     * <p/>
+     *
      * This method runs in linear time for a "random access" list (which
      * provides near-constant-time positional access).  It may require
      * quadratic time for a "sequential access" list.
@@ -932,13 +932,13 @@ public class CollectionUtil
      * Randomly permute the specified list using the specified source of
      * randomness.  All permutations occur with equal likelihood
      * assuming that the source of randomness is fair.<p>
-     * <p/>
+     *
      * This implementation traverses the list backwards, from the last element
      * up to the second, repeatedly swapping a randomly selected element into
      * the "current position".  Elements are randomly selected from the
      * portion of the list that runs from the first element to the current
      * position, inclusive.<p>
-     * <p/>
+     *
      * This method runs in linear time for a "random access" list (which
      * provides near-constant-time positional access).  It may require
      * quadratic time for a "sequential access" list.
@@ -956,7 +956,7 @@ public class CollectionUtil
     /**
      * Replaces all of the elements of the specified list with the specified
      * element. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param list the list to be filled with the specified element.
@@ -975,7 +975,7 @@ public class CollectionUtil
      * will be identical to its index in the source list.  The destination
      * list must be at least as long as the source list.  If it is longer, the
      * remaining elements in the destination list are unaffected. <p>
-     * <p/>
+     *
      * This method runs in linear time.
      *
      * @param dest The destination list.
@@ -998,7 +998,7 @@ public class CollectionUtil
      * comparable</i> (that is, <tt>e1.compareTo(e2)</tt> must not throw a
      * <tt>ClassCastException</tt> for any elements <tt>e1</tt> and
      * <tt>e2</tt> in the collection).<p>
-     * <p/>
+     *
      * This method iterates over the entire collection, hence it requires
      * time proportional to the size of the collection.
      *
@@ -1024,7 +1024,7 @@ public class CollectionUtil
      * comparator (that is, <tt>comp.compare(e1, e2)</tt> must not throw a
      * <tt>ClassCastException</tt> for any elements <tt>e1</tt> and
      * <tt>e2</tt> in the collection).<p>
-     * <p/>
+     *
      * This method iterates over the entire collection, hence it requires
      * time proportional to the size of the collection.
      *
@@ -1053,7 +1053,7 @@ public class CollectionUtil
      * comparable</i> (that is, <tt>e1.compareTo(e2)</tt> must not throw a
      * <tt>ClassCastException</tt> for any elements <tt>e1</tt> and
      * <tt>e2</tt> in the collection).<p>
-     * <p/>
+     *
      * This method iterates over the entire collection, hence it requires
      * time proportional to the size of the collection.
      *
@@ -1077,7 +1077,7 @@ public class CollectionUtil
      * comparator (that is, <tt>comp.compare(e1, e2)</tt> must not throw a
      * <tt>ClassCastException</tt> for any elements <tt>e1</tt> and
      * <tt>e2</tt> in the collection).<p>
-     * <p/>
+     *
      * This method iterates over the entire collection, hence it requires
      * time proportional to the size of the collection.
      *

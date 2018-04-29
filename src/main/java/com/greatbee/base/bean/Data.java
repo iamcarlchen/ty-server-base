@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * 数据
- * <p/>
+ *
  * Created by CarlChen on 2016/11/12.
  */
 public class Data extends HashMap<String,Object>{

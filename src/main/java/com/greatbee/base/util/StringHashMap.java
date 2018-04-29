@@ -161,7 +161,7 @@ public class StringHashMap<V>
      * Like addEntry except that this version is used when creating entries
      * as part of Map construction or "pseudo-construction" (cloning,
      * deserialization).  This version needn't worry about resizing the table.
-     * <p/>
+     *
      * Subclass overrides this to alter the behavior of HashMap(Map),
      * clone, and readObject.
      */
@@ -286,7 +286,7 @@ public class StringHashMap<V>
      * Add a new entry with the specified key, value and hash code to
      * the specified bucket.  It is the responsibility of this
      * method to resize the table if appropriate.
-     * <p/>
+     *
      * Subclass overrides this to alter the behavior of put method.
      */
     void addEntry(int hash, String key, V value, int bucketIndex)
@@ -302,7 +302,7 @@ public class StringHashMap<V>
      * Rehashes the contents of this map into a new array with a
      * larger capacity.  This method is called automatically when the
      * number of keys in this map reaches its threshold.
-     * <p/>
+     *
      * If current capacity is MAXIMUM_CAPACITY, this method does not
      * resize the map, but but sets threshold to Integer.MAX_VALUE.
      * This has the effect of preventing future calls.
@@ -454,7 +454,7 @@ public class StringHashMap<V>
 
     /**
      * Copies all of the mappings from the specified map to this one.
-     * <p/>
+     *
      * These mappings replace any mappings that this map had for any of the
      * keys currently in the specified Map.
      *

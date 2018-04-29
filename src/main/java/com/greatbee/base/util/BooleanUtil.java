@@ -43,21 +43,6 @@ public class BooleanUtil
      * ַתɲ
      *
      * @param value ǿԽַܵ<br>
-     *              <pre>
-     *                                                                     True   -->   TRUE         False  -->   FALSE
-     *                                                                     true   -->   TRUE         false  -->   FALSE
-     *                                                                     TRUE   -->   TRUE         FALSE  -->   FALSE
-     *                                                                     Yes    -->   TRUE         No     -->   FALSE
-     *                                                                     yes    -->   TRUE         no     -->   FALSE
-     *                                                                     YES    -->   TRUE         NO     -->   FALSE
-     *                                                                     On     -->   TRUE         Off    -->   FALSE
-     *                                                                     on     -->   TRUE         off    -->   FALSE
-     *                                                                     ON     -->   TRUE         OFF    -->   FALSE
-     *                                                                     T      -->   TRUE         F      -->   FALSE
-     *                                                                     t      -->   TRUE         f      -->   FALSE
-     *                                                                     Y      -->   TRUE         N      -->   FALSE
-     *                                                                     y      -->   TRUE         n      -->   FALSE
-     *                                                                  </pre>
      * @return [Boolean] 򷵻 <code>null</code>
      */
     public static final Boolean toBoolean(String value)
@@ -77,21 +62,6 @@ public class BooleanUtil
      * ַתɲ
      *
      * @param value ǿԽַܵ<br>
-     *              <pre>
-     *                                                                     True   -->   TRUE         False  -->   FALSE
-     *                                                                     true   -->   TRUE         false  -->   FALSE
-     *                                                                     TRUE   -->   TRUE         FALSE  -->   FALSE
-     *                                                                     Yes    -->   TRUE         No     -->   FALSE
-     *                                                                     yes    -->   TRUE         no     -->   FALSE
-     *                                                                     YES    -->   TRUE         NO     -->   FALSE
-     *                                                                     On     -->   TRUE         Off    -->   FALSE
-     *                                                                     on     -->   TRUE         off    -->   FALSE
-     *                                                                     ON     -->   TRUE         OFF    -->   FALSE
-     *                                                                     T      -->   TRUE         F      -->   FALSE
-     *                                                                     t      -->   TRUE         f      -->   FALSE
-     *                                                                     Y      -->   TRUE         N      -->   FALSE
-     *                                                                     y      -->   TRUE         n      -->   FALSE
-     *                                                                  </pre>
      * @return [Boolean] 򷵻 <code>#toBoolean(defValue)</code>
      */
     public static final Boolean toBoolean(String value, boolean defValue)
@@ -101,20 +71,6 @@ public class BooleanUtil
     }
 
     /**
-     *                                                                     True   -->   TRUE         False  -->   FALSE
-     *                                                                     true   -->   TRUE         false  -->   FALSE
-     *                                                                     TRUE   -->   TRUE         FALSE  -->   FALSE
-     *                                                                     Yes    -->   TRUE         No     -->   FALSE
-     *                                                                     yes    -->   TRUE         no     -->   FALSE
-     *                                                                     YES    -->   TRUE         NO     -->   FALSE
-     *                                                                     On     -->   TRUE         Off    -->   FALSE
-     *                                                                     on     -->   TRUE         off    -->   FALSE
-     *                                                                     ON     -->   TRUE         OFF    -->   FALSE
-     *                                                                     T      -->   TRUE         F      -->   FALSE
-     *                                                                     t      -->   TRUE         f      -->   FALSE
-     *                                                                     Y      -->   TRUE         N      -->   FALSE
-     *                                                                     y      -->   TRUE         n      -->   FALSE
-     *                                                                  </pre>
      * @return [Boolean] 򷵻 <code>defValue</code>
      */
     public static final boolean toBool(String value, boolean defValue)
@@ -123,21 +79,6 @@ public class BooleanUtil
     }
 
     /**
-     *              <pre>
-     *                                                                     True   -->   TRUE         False  -->   FALSE
-     *                                                                     true   -->   TRUE         false  -->   FALSE
-     *                                                                     TRUE   -->   TRUE         FALSE  -->   FALSE
-     *                                                                     Yes    -->   TRUE         No     -->   FALSE
-     *                                                                     yes    -->   TRUE         no     -->   FALSE
-     *                                                                     YES    -->   TRUE         NO     -->   FALSE
-     *                                                                     On     -->   TRUE         Off    -->   FALSE
-     *                                                                     on     -->   TRUE         off    -->   FALSE
-     *                                                                     ON     -->   TRUE         OFF    -->   FALSE
-     *                                                                     T      -->   TRUE         F      -->   FALSE
-     *                                                                     t      -->   TRUE         f      -->   FALSE
-     *                                                                     Y      -->   TRUE         N      -->   FALSE
-     *                                                                     y      -->   TRUE         n      -->   FALSE
-     *                                                                  </pre>
      * @return [Boolean] <code>defValue</code>
      */
     public static final boolean toBool(String value)

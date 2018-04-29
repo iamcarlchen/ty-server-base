@@ -5,17 +5,12 @@ import java.util.Enumeration;
 import java.util.Iterator;
 
 /**
- * Iterator��Enumeration��������
- * <p/>
- * �Ѿ��޷�ͨ���췽�������죬ֻ��ʹ��CollectionUtil������
- *
  * @see Iterator
  * @see Enumeration
  */
 public class EnumIterator<V> implements Iterator<V>, Enumeration<V>
 {
     /**
-     * ö��
      */
     private Iterator<V> iterator;
 

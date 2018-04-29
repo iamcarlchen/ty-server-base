@@ -14,8 +14,8 @@ import java.util.*;
 public class ArrayUtil
 {
     /**
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void rangeCheck(int length, int from, int to)
     {
@@ -32,7 +32,7 @@ public class ArrayUtil
     }
 
     /**
-     * @throws ArrayIndexOutOfBoundsException <code>index<off||index>=off+len</code>
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void indexCheck(int off, int len, int index)
     {
@@ -1754,8 +1754,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(long[] a, int from, int to,
                             long val)
@@ -1784,8 +1784,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(int[] a, int from, int to,
                             int val)
@@ -1814,8 +1814,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(short[] a, int from, int to,
                             short val)
@@ -1844,8 +1844,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(char[] a, int from, int to,
                             char val)
@@ -1874,8 +1874,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(byte[] a, int from, int to,
                             byte val)
@@ -1904,8 +1904,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(boolean[] a, int from, int to,
                             boolean val)
@@ -1929,8 +1929,8 @@ public class ArrayUtil
     }
 
     /**
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(double[] a, int from, int to,
                             double val)
@@ -1958,8 +1958,8 @@ public class ArrayUtil
      * @param from ʼ
      * @param to   
      * @param val  ֵ
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(float[] a, int from, int to,
                             float val)
@@ -1983,8 +1983,8 @@ public class ArrayUtil
     }
 
     /**
-     * @throws IllegalArgumentException       <code> from > to</code>
-     * @throws ArrayIndexOutOfBoundsException <code>from<0||to>length</code>
+     * @throws IllegalArgumentException
+     * @throws ArrayIndexOutOfBoundsException
      */
     public static void fill(Object[] a, int from, int to,
                             Object val)
@@ -2001,7 +2001,7 @@ public class ArrayUtil
      * For any two <tt>long</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Long}
@@ -2035,7 +2035,7 @@ public class ArrayUtil
      * For any two non-null <tt>int</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Integer}
@@ -2068,7 +2068,7 @@ public class ArrayUtil
      * For any two <tt>short</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Short}
@@ -2101,7 +2101,7 @@ public class ArrayUtil
      * For any two <tt>char</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Character}
@@ -2134,7 +2134,7 @@ public class ArrayUtil
      * For any two <tt>byte</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Byte}
@@ -2167,7 +2167,7 @@ public class ArrayUtil
      * For any two <tt>boolean</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Boolean}
@@ -2199,7 +2199,7 @@ public class ArrayUtil
      * For any two <tt>float</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Float}
@@ -2231,7 +2231,7 @@ public class ArrayUtil
      * For any two <tt>double</tt> arrays <tt>a</tt> and <tt>b</tt>
      * such that <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is the same value that would be
      * obtained by invoking the {@link List#hashCode() <tt>hashCode</tt>}
      * method on a {@link List} containing a sequence of {@link Double}
@@ -2265,11 +2265,11 @@ public class ArrayUtil
      * acceptable to invoke this method on an array that contains itself as an
      * element,  either directly or indirectly through one or more levels of
      * arrays.
-     * <p/>
+     * <p></p>
      * <p>For any two arrays <tt>a</tt> and <tt>b</tt> such that
      * <tt>Arrays.equals(a, b)</tt>, it is also the case that
      * <tt>Arrays.hashCode(a) == Arrays.hashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is equal to the value that would
      * be returned by <tt>Arrays.asList(a).hashCode()</tt>, unless <tt>a</tt>
      * is <tt>null</tt>, in which case <tt>0</tt> is returned.
@@ -2304,11 +2304,11 @@ public class ArrayUtil
      * contains itself as an element, either directly or indirectly through
      * one or more levels of arrays.  The behavior of such an invocation is
      * undefined.
-     * <p/>
+     * <p></p>
      * <p>For any two arrays <tt>a</tt> and <tt>b</tt> such that
      * <tt>Arrays.deepEquals(a, b)</tt>, it is also the case that
      * <tt>Arrays.deepHashCode(a) == Arrays.deepHashCode(b)</tt>.
-     * <p/>
+     * <p></p>
      * <p>The computation of the value returned by this method is similar to
      * that of the value returned by {@link List#hashCode()} on a list
      * containing the same elements as <tt>a</tt> in the same order, with one
@@ -2379,12 +2379,12 @@ public class ArrayUtil
      * equal</i> to one another.  Unlike the @link{#equals{Object[],Object[])
      * method, this method is appropriate for use with nested arrays of
      * arbitrary depth.
-     * <p/>
+     * <p></p>
      * <p>Two array references are considered deeply equal if both
      * are <tt>null</tt>, or if they refer to arrays that contain the same
      * number of elements and all corresponding pairs of elements in the two
      * arrays are deeply equal.
-     * <p/>
+     * <p></p>
      * <p>Two possibly <tt>null</tt> elements <tt>e1</tt> and <tt>e2</tt> are
      * deeply equal if any of the following conditions hold:
      * <ul>
@@ -2397,7 +2397,7 @@ public class ArrayUtil
      * <li> <tt>e1.equals(e2)</tt> would return true.
      * </ul>
      * Note that this definition permits <tt>null</tt> elements at any depth.
-     * <p/>
+     * <p></p>
      * <p>If either of the specified arrays contain themselves as elements
      * either directly or indirectly through one or more levels of arrays,
      * the behavior of this method is undefined.
@@ -2854,7 +2854,7 @@ public class ArrayUtil
      * strings by the {@link Object#toString} method inherited from
      * <tt>Object</tt>, which describes their <i>identities</i> rather than
      * their contents.
-     * <p/>
+     * <p></p>
      * <p>The value returned by this method is equal to the value that would
      * be returned by <tt>Arrays.asList(a).toString()</tt>, unless <tt>a</tt>
      * is <tt>null</tt>, in which case <tt>"null"</tt> is returned.
@@ -2895,26 +2895,26 @@ public class ArrayUtil
      * array.  If the array contains other arrays as elements, the string
      * representation contains their contents and so on.  This method is
      * designed for converting multidimensional arrays to strings.
-     * <p/>
+     * <p></p>
      * <p>The string representation consists of a list of the array's
      * elements, enclosed in square brackets (<tt>"[]"</tt>).  Adjacent
      * elements are separated by the characters <tt>", "</tt> (a comma
      * followed  by a space).  Elements are converted to strings as by
      * <tt>String.valueOf(Object)</tt>, unless they are themselves
      * arrays.
-     * <p/>
+     * <p></p>
      * <p>If an element <tt>e</tt> is an array of a primitive type, it is
      * converted to a string as by invoking the appropriate overloading of
      * <tt>Arrays.toString(e)</tt>.  If an element <tt>e</tt> is an array of a
      * reference type, it is converted to a string as by invoking
      * this method recursively.
-     * <p/>
+     * <p></p>
      * <p>To avoid infinite recursion, if the specified array contains itself
      * as an element, or contains an indirect reference to itself through one
      * or more levels of arrays, the self-reference is converted to the string
      * <tt>"[...]"</tt>.  For example, an array containing only a reference
      * to itself would be rendered as <tt>"[[...]]"</tt>.
-     * <p/>
+     * <p></p>
      * <p>This method returns <tt>"null"</tt> if the specified array
      * is <tt>null</tt>.
      *

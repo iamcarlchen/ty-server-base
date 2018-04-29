@@ -2,7 +2,6 @@ package com.greatbee.core.bean.constant;
 
 /**
  * DT(Data type数据类型)
- * <p/>
  * Created by CarlChen on 16/10/11.
  */
 public enum DT {

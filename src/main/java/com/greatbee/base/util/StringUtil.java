@@ -11,8 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * �ַ��?����
- *
+ * StringUtil
  * @author system
  * @version 1.00 2005-2-5 21:01:09
  */
@@ -21,12 +20,10 @@ public class StringUtil
     public static final String NULL = "null";
     public static final char[] NULL_CHARS = NULL.toCharArray();
     /**
-     * �յ��ַ�����
      */
     public static final String[] EMPTY_STRING_ARRAY = new String[0];
 
     /**
-     * �յ��ַ�
      */
     public static final String EMPTY_STRING = "";
 
@@ -82,10 +79,7 @@ public class StringUtil
     }
 
     /**
-     * �������ʽ�����ַ�
      *
-     * @param object   ����
-     * @param defValue Ĭ���ַ�
      */
     public static final String getString(Object object, String defValue)
     {
@@ -93,10 +87,6 @@ public class StringUtil
     }
 
     /**
-     * ��ݶ��󷵻��ַ�����
-     *
-     * @param object ����
-     * @return ���󷵻��ַ�����
      */
     public static final String[] getStringArray(Object object)
     {
@@ -125,7 +115,6 @@ public class StringUtil
 
     /**
      * Email Domain
-     * <p/>
      * iamcarlchen@gmail.com
      *
      * @param email
@@ -160,13 +149,6 @@ public class StringUtil
     }
 
     /**
-     * �Ƚ������ַ��Ƿ����
-     * <p/>
-     * ��� str1 == str2 == null return true
-     *
-     * @param str1 �ַ�1
-     * @param str2 �ַ�2
-     * @return [true|false] �Ƿ����
      */
     public static final boolean equals(String str1, String str2)
     {
@@ -178,14 +160,6 @@ public class StringUtil
     }
 
     /**
-     * �Ƚ������ַ��Ƿ���ȣ����Դ�Сд��
-     * <p/>
-     * <p/>
-     * ��� str1 == str2 == null return true
-     *
-     * @param str1 �ַ�1
-     * @param str2 �ַ�2
-     * @return [true|false] �Ƿ����
      */
     public static final boolean equalsIgnoreCase(String str1,
                                                  String str2)
@@ -197,10 +171,6 @@ public class StringUtil
     }
 
     /**
-     * �����ַ�Ĺ�ϣ��
-     *
-     * @param str �ַ�
-     * @return <code>str.hashCode</code> ��������<code>null</code> ����<code>0</codeL
      */
     public static final int hashCode(String str)
     {
@@ -211,10 +181,6 @@ public class StringUtil
     }
 
     /**
-     * ���Դ�Сд�����Hash����
-     *
-     * @param str
-     * @return Hash����
      */
     public static final int hashCodeIgnoreCase(String str)
     {
@@ -230,12 +196,6 @@ public class StringUtil
     }
 
     /**
-     * ��ݷָ����ַ�ֳ��ַ�����
-     *
-     * @param src �ַ�
-     * @param sep �ָ���
-     * @return ���<code>src == null</code>����<code>null</code>
-     *         ���<code>src == ""</code> ����<code>#EMPTY_STRING_ARRAY</code>
      */
     public static final String[] toStringArray(String src, char sep)
     {
@@ -266,13 +226,6 @@ public class StringUtil
     }
 
     /**
-     * ��ݷָ����ַ�ֳ��ַ�����
-     *
-     * @param src    �ַ�
-     * @param sep    �ָ���
-     * @param ignore �Ƿ���Կյ��ַ�
-     * @return ���<code>src == null</code>����<code>null</code>
-     *         ���<code>src == ""</code> ����<code>#EMPTY_STRING_ARRAY</code>
      */
     public static final String[] toStringArray(String src, char sep, boolean ignore)
     {
@@ -294,16 +247,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(String[] array, int off,
                                         int len, char sep)
@@ -312,11 +255,6 @@ public class StringUtil
     }
 
     /**
-     * �������������ַ�
-     *
-     * @param array ��������
-     * @param sep   �ָ���
-     * @return �ַ�
      */
     public static final String toString(Object[] array, char sep)
     {
@@ -327,16 +265,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(Object[] array, int off,
                                         int len, char sep)
@@ -384,16 +312,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(boolean[] array, int off,
                                         int len, char sep)
@@ -441,16 +359,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(byte[] array, int off,
                                         int len, char sep)
@@ -497,16 +405,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(char[] array, int off,
                                         int len, char sep)
@@ -553,16 +451,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(int[] array, int off,
                                         int len, char sep)
@@ -609,16 +497,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(long[] array, int off,
                                         int len, char sep)
@@ -665,16 +543,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(float[] array, int off,
                                         int len, char sep, int fraction)
@@ -721,16 +589,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�������ϳ��ַ�ÿ��Ԫ�ؼ��÷ָ������
-     *
-     * @param array �ַ�
-     * @param off   ��ʼλ��
-     * @param len   ����
-     * @param sep   �ָ���
-     * @return ���<code>array == null</code>����<code>null</code>
-     *         ���<code>len - off == 0<code> ����<code>#EMPTY_STRING</code>
-     * @throws ArrayIndexOutOfBoundsException ���off����len�ṩ��λ�ó���
-     * @see #toStringArray(String, char)
      */
     public static final String toString(double[] array, int off,
                                         int len, char sep, int fraction)
@@ -838,12 +696,6 @@ public class StringUtil
     }
 
     /**
-     * Separate the string to array
-     * if src == null return null;
-     * ""     --> {0}
-     * ",1,2" --> {0, 1, 2}
-     * "1,,2," --> {1,0,2,0}
-     * "a,1,2," --> null (Exception)
      */
     public static final int[] toIntArray(String src, char sep)
     {
@@ -896,12 +748,6 @@ public class StringUtil
     }
 
     /**
-     * ׷���ַ�
-     *
-     * @param target
-     * @param add
-     * @param sep
-     * @return
      */
     public static String addString(String target, String add, char sep)
     {
@@ -915,11 +761,6 @@ public class StringUtil
     }
 
     /**
-     * �ж�Target�ַ�����Ƿ��CheckStr�ַ�
-     *
-     * @param target
-     * @param checkStr
-     * @return
      */
     public static boolean checkIfContainerString(String target, String checkStr)
     {
@@ -1016,12 +857,6 @@ public class StringUtil
     }
 
     /**
-     * �滻�ַ�
-     *
-     * @param str �ַ�
-     * @param src Ԫ
-     * @param dst
-     * @return �ַ�
      */
     public static final String replace(String str, char[] src, String[] dst)
     {
@@ -1066,11 +901,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ַ��Ƿ���ָ�����ַ�ͷ
-     *
-     * @param str �ַ�
-     * @param ch  �ַ�
-     * @return �Ƿ���ָ�����ַ�ͷ
      */
     public static final boolean startsWith(String str, char ch)
     {
@@ -1078,11 +908,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ַ��Ƿ���ָ�����ַ����
-     *
-     * @param str �ַ�
-     * @param ch  �ַ�
-     * @return �Ƿ���ָ�����ַ����
      */
     public static final boolean endsWith(String str, char ch)
     {
@@ -1092,10 +917,6 @@ public class StringUtil
     private static final Locale DEFAULT = Locale.getDefault();
 
     /**
-     * ����ĸ��д��һ���ַ�
-     *
-     * @param str
-     * @return
      */
     public static final String toUpperFirstCase(String str)
     {
@@ -1114,10 +935,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�ת���ɴ�д(����JDK(<=1.3)�����toUpperCaseЧ�ʽϵ�)
-     *
-     * @param str
-     * @return ��д
      */
     public static final String toUpperCase(String str)
     {
@@ -1125,11 +942,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�ת���ɴ�д(����JDK(<=1.3)�����toUpperCaseЧ�ʽϵ�)
-     *
-     * @param str
-     * @param locale
-     * @return ��д
      */
     public static final String toUpperCase(String str, Locale locale)
     {
@@ -1194,11 +1006,6 @@ public class StringUtil
     }
 
     /**
-     * �����ַ�����
-     *
-     * @param text          �ı�
-     * @param caseSensitive ��Сд����
-     * @return �ַ�����
      */
     public static final char[] toCharArray(String text, boolean caseSensitive)
     {
@@ -1214,10 +1021,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�ת����Сд(����JDK(<=1.3)�����toUpperCaseЧ�ʽϵ�)
-     *
-     * @param str
-     * @return Сд
      */
     public static final String toLowerCase(String str)
     {
@@ -1225,11 +1028,6 @@ public class StringUtil
     }
 
     /**
-     * ���ַ�ת����Сд(����JDK(<=1.3)�����toUpperCaseЧ�ʽϵ�)
-     *
-     * @param str
-     * @param locale
-     * @return Сд
      */
     public static final String toLowerCase(String str, Locale locale)
     {
@@ -1318,10 +1116,6 @@ public class StringUtil
     }
 
     /**
-     * ��Listת��String[]
-     *
-     * @param list
-     * @return String[]
      */
     public static final String[] toStringArray(List<String> list)
     {
@@ -1338,9 +1132,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ǲ�����ȫ����8859_1�ַ���ַ�
-     *
-     * @param str �ַ�
      */
     public static final boolean isISO88591(String str)
     {
@@ -1356,9 +1147,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ǲ�����ȫ����8859_1�ַ���ַ�
-     *
-     * @param chars �ַ�
      */
     public static final boolean isISO88591(char[] chars)
     {
@@ -1374,9 +1162,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ǲ�����ȫ����8859_1�ַ���ַ�
-     *
-     * @param ch �ַ�
      */
     public static final boolean isISO88591(char ch)
     {
@@ -1384,9 +1169,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ǲ�����ȫ����ASCII
-     *
-     * @param str �ַ�
      */
     public static final boolean isAscii(String str)
     {
@@ -1403,9 +1185,6 @@ public class StringUtil
     }
 
     /**
-     * �ж��ǲ�����ȫ����ASCII
-     *
-     * @param chars �ַ�
      */
     public static final boolean isAscii(char[] chars)
     {
@@ -1422,13 +1201,6 @@ public class StringUtil
 
 
     /**
-     * �ַ�ת��Ϊ������ַ���ʽ<br>
-     * ����쳣����ԭ�����ַ�<br>
-     * �������ֻ�ʺ���"8859_1"����ݸ������ַ�Ļ�ԭ����<br>
-     *
-     * @param string �ַ�
-     * @param from   Դ�ַ�
-     * @param to     Ŀ���ַ�
      */
     public static final String convert(String string,
                                        String from,
@@ -1499,9 +1271,6 @@ public class StringUtil
     }
 
     /**
-     * ��ݵ�ǰʱ������ַ�
-     *
-     * @return
      */
     public static final String getCurrentTimestamp(String prefix, String suffix)
     {

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 列表数据
- * <p/>
+ *
  * Created by CarlChen on 2016/11/12.
  */
 public class DataList implements Serializable{
@@ -23,7 +23,6 @@ public class DataList implements Serializable{
     /**
      * 数据列表
      *
-     * @return
      */
     public List getList() {
         return list;
@@ -31,8 +30,7 @@ public class DataList implements Serializable{
 
     /**
      * 得到一共有多少条数据
-     *
-     * @return
+     * @return 数量
      */
     public int getTotalRecords() {
         return CollectionUtil.isValid(list) ? list.size() : 0;
