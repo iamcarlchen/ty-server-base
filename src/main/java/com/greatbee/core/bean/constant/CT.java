@@ -11,14 +11,14 @@ public enum CT {
     LT("<", "lt"),
     NEQ("!=", "neq"),
     EQ("=", "eq"),
-    IN("IN", "In"),
     NOTIN("NOT IN", "notIn"),
-    LIKE("LIKE", "like"),
+    IN("IN", "In"),
     LeftLIKE("LIKE", "leftLike"),
     RightLIKE("LIKE", "rightLike"),
+    LIKE("LIKE", "like"),
     ISNOT("IS NOT", "isnot"),
-    NULL("IS NULL", "Null"),
     NotNull("IS NOT NULL", "NotNull"),
+    NULL("IS NULL", "Null"),
     IS("IS", "is"),
     Multi("Multi", "Multi"),//混合类型，需要解析条件的value值
     Custom("Custom","Custom");//自定义类型，条件由前端传过来
