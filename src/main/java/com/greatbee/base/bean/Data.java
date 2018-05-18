@@ -2,14 +2,14 @@ package com.greatbee.base.bean;
 
 import com.greatbee.base.util.DataUtil;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * 数据
  *
  * Created by CarlChen on 2016/11/12.
  */
-public class Data extends HashMap<String,Object>{
+public class Data extends LinkedHashMap<String,Object> {
 
 
 
