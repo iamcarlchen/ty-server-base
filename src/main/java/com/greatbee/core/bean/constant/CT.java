@@ -16,6 +16,7 @@ public enum CT {
     LeftLIKE("LIKE", "leftLike"),
     RightLIKE("LIKE", "rightLike"),
     LIKE("LIKE", "like"),
+    NOTLIKE("NOT LIKE","notLike"),
     ISNOT("IS NOT", "isnot"),
     NotNull("IS NOT NULL", "NotNull"),
     NULL("IS NULL", "Null"),

@@ -150,6 +150,8 @@ public class Condition {
                     ps.setString(_index++, condition.getConditionFieldValue() + "%");
                 } else if (CT.LIKE.getName().equals(condition.getCt())) {
                     ps.setString(_index++, "%" + condition.getConditionFieldValue() + "%");
+                } else if (CT.NOTLIKE.getName().equals(condition.getCt())) {
+                    ps.setString(_index++, "%" + condition.getConditionFieldValue() + "%");
                 } else if (CT.IN.getName().equalsIgnoreCase(condition.getCt()) || CT.NOTIN.getName().equalsIgnoreCase(condition.getCt())) {
                     if (StringUtil.isInvalid(condition.getConditionFieldValue())) {
                         ps.setString(_index++, "9999999999");//设置一个不存在的值
@@ -235,6 +237,8 @@ public class Condition {
             return Restrictions.not(Restrictions.in(condition.getConditionFieldName(), condition.getConditionFieldValue().split(",")));
         } else if (CT.LIKE.getName().equals(condition.getCt())) {
             return Restrictions.like(condition.getConditionFieldName(), "%" + condition.getConditionFieldValue() + "%");
+        } else if (CT.NOTLIKE.getName().equals(condition.getCt())) {
+            return Restrictions.sqlRestriction(condition.getConditionFieldName() + " NOT LIKE %" + condition.getConditionFieldValue() + "%");
         } else if (CT.LeftLIKE.getName().equals(condition.getCt())) {
             return Restrictions.like(condition.getConditionFieldName(), "%" + condition.getConditionFieldValue());
         } else if (CT.RightLIKE.getName().equals(condition.getCt())) {
