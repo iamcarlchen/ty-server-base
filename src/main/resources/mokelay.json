@@ -1,0 +1,11 @@
+{
+  "model":{
+    "type":"DB"
+  },
+  "service":{
+    "type":"DB"
+  },
+  "app":{
+    "type":"DB"
+  }
+}
