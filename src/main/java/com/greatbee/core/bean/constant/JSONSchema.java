@@ -28,6 +28,8 @@ public class JSONSchema {
 
     public static String Mokelay_DS_Alias = "db_ty";
 
+    public static String Mokelay_Config_File_Name = "mokelay";
+
     public static String JSON_Field_Alias = "alias";
     public static String JSON_Field_OIS = "ois";
     public static String JSON_Field_Fields = "fields";
@@ -37,5 +39,17 @@ public class JSONSchema {
     public static String JSON_Field_From_Oi_Alias = "fromOiAlias";
     public static String JSON_Field_Resource = "resource";
     public static String JSON_Field_Field_Name = "fieldName";
+
+    public static String JSON_Config_Model = "model";
+
+    public static String JSON_Config_Service = "service";
+
+    public static String JSON_Config_App = "app";
+
+    public static String JSON_Config_Type = "type";
+
+    public static String JSON_Config_Json = "json";
+
+    public static String JSON_Config_Db = "db";
 
 }
